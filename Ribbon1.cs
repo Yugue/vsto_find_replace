@@ -23,8 +23,8 @@ namespace HelloWorld
             //Worksheet currentSheet = Globals.ThisAddIn.GetActiveWorksheet();
             //currentSheet.Range["A1"].Value = "Hello World";
             //currentSheet.Columns.AutoFit();
-            Globals.ThisAddIn.runFiles(@"C:\Users\ychen\Desktop\test");
-            //ThisAddIn.ReplaceTextInExcelFile("test.xlsx", "Engineer", "Designer");
+            Globals.ThisAddIn.find_replace(@"C:\Users\ychen\Desktop\test");
         }
+
     }
 }

@@ -36,7 +36,7 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.btnHelloWorld = this.Factory.CreateRibbonButton();
+            this.btn_find_rep = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -44,20 +44,20 @@
             // tab1
             // 
             this.tab1.Groups.Add(this.group1);
-            this.tab1.Label = "Hello";
+            this.tab1.Label = "Find and Replace";
             this.tab1.Name = "tab1";
             // 
             // group1
             // 
-            this.group1.Items.Add(this.btnHelloWorld);
-            this.group1.Label = "Hello";
+            this.group1.Items.Add(this.btn_find_rep);
+            this.group1.Label = "Tools";
             this.group1.Name = "group1";
             // 
-            // btnHelloWorld
+            // btn_find_rep
             // 
-            this.btnHelloWorld.Label = "Generate";
-            this.btnHelloWorld.Name = "btnHelloWorld";
-            this.btnHelloWorld.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            this.btn_find_rep.Label = "Find and Replace";
+            this.btn_find_rep.Name = "btn_find_rep";
+            this.btn_find_rep.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // Ribbon1
             // 
@@ -77,7 +77,7 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnHelloWorld;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btn_find_rep;
     }
 
     partial class ThisRibbonCollection

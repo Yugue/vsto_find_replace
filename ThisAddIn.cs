@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Linq;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
@@ -27,7 +28,7 @@ namespace HelloWorld
         }
                
         //Run through all the files in the directory, and find and replace
-        public void runFiles(string _path)
+        public void find_replace(string _path)
         {
             string path = _path;
             object m = Type.Missing;
@@ -48,10 +49,13 @@ namespace HelloWorld
             listOfFiles = (listOfFiles.Concat(listOfFiles_5)).ToArray();
 
             xlApp.DisplayAlerts = false;
+            int count = 0;
             foreach (FileInfo file in listOfFiles)
             {
 
                 var xlWorkBook = xlApp.Workbooks.Open(file.FullName);
+                string file_name = file.FullName.Remove(file.FullName.Length - 5);
+                string file_ext = file.FullName.Substring(file.FullName.Length - 4);
 
                 foreach (Excel.Worksheet xlWorkSheet in xlWorkBook.Worksheets)
                 {
@@ -60,21 +64,37 @@ namespace HelloWorld
 
                     // call the replace method to replace instances. 
                     bool success = (bool)r.Replace(
-                        "Engineer",
                         "Designer",
+                        "Engineer",
                         Excel.XlLookAt.xlPart,
                         Excel.XlSearchOrder.xlByRows, false, m, m, m);
+                    count++;
                 }
-                xlWorkBook.Save();
+                if (file_ext == "xltx")
+                {
+                    xlWorkBook.SaveAs(@file_name, Excel.XlFileFormat.xlOpenXMLTemplate,
+                        missing, missing, missing, missing, Excel.XlSaveAsAccessMode.xlNoChange,
+                        missing, missing, missing, missing, missing);
+                }
+
+                else if (file_ext == "xltm")
+                {
+                    xlWorkBook.SaveAs(@file_name, Excel.XlFileFormat.xlOpenXMLTemplateMacroEnabled,
+                        missing, missing, missing, missing, Excel.XlSaveAsAccessMode.xlNoChange,
+                        missing, missing, missing, missing, missing);
+                }
+                else
+                {
+                    xlWorkBook.Save();
+                }
                 xlWorkBook.Close();
             }
 
+            MessageBox.Show("Files found: " + count.ToString());
             xlApp.Quit();
 
             Marshal.ReleaseComObject(xlApp);
         }
-
-
 
         #region VSTO generated code
 
