@@ -1,0 +1,11 @@
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\bin\Debug\HelloWorld.dll
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\bin\Debug\HelloWorld.dll.manifest
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\bin\Debug\HelloWorld.vsto
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.Properties.Resources.resources
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.Ribbon1.resources
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.csproj.GenerateResource.cache
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.dll
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.pdb
