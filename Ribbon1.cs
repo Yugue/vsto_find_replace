@@ -21,7 +21,7 @@ namespace HelloWorld
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisAddIn.find_replace(@"C:\Users\ychen\Desktop\test");
+            Globals.ThisAddIn.find_replace();
         }
 
     }

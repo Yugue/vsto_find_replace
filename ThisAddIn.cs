@@ -29,19 +29,32 @@ namespace HelloWorld
         }
                
         //Run through all the files in the directory, and find and replace
-        public void find_replace(string _path)
+        public void find_replace()
         {
-            string path = _path;
+            string path = "";
+            // prompt the user to select the folder path
+            using(var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string[] files = Directory.GetFiles(fbd.SelectedPath);
+                    path = fbd.SelectedPath;
+                    System.Windows.Forms.MessageBox.Show("Files found: " + files.Length.ToString() + "at path: " + path, "Message");
+                }
+            }
+
             object m = Type.Missing;
 
             // Interaction.Inputbox is a user prompt, the user chooses the string he/she would like to replace
             string replace = Interaction.InputBox("Type the text you would like to replace", "Find text", "Default", -1, -1);
             string replacement = Interaction.InputBox("Replace that text with", "Replace text", "Default", -1, -1);
             
-            var xlApp = new Microsoft.Office.Interop.Excel.Application();
+            var xlApp = new Microsoft.Office.Interop.Excel.Application();        
 
-            DirectoryInfo d = new DirectoryInfo(path);
-
+          // grab all the excel files at that directory
+            DirectoryInfo d = new DirectoryInfo(@path);
             FileInfo[] listOfFiles_1 = d.GetFiles("*.xlsx*").ToArray();
             FileInfo[] listOfFiles_2 = d.GetFiles("*.xls*").ToArray();            
             FileInfo[] listOfFiles_3 = d.GetFiles("*.xlsm*").ToArray();
@@ -54,8 +67,7 @@ namespace HelloWorld
             listOfFiles = (listOfFiles.Concat(listOfFiles_4)).ToArray();
             listOfFiles = (listOfFiles.Concat(listOfFiles_5)).ToArray();
 
-            xlApp.DisplayAlerts = false;
-            int count = 0;
+            xlApp.DisplayAlerts = false;            
             // traverse through each file
             foreach (FileInfo file in listOfFiles)
             {
@@ -75,7 +87,6 @@ namespace HelloWorld
                         replacement,
                         Excel.XlLookAt.xlPart,
                         Excel.XlSearchOrder.xlByRows, false, m, m, m);
-                    count++;
                 }
                 // if file is xltx, has to save as to overwrite the new changes
                 if (file_ext == "xltx")
@@ -98,7 +109,7 @@ namespace HelloWorld
                 xlWorkBook.Close();
             }
 
-            MessageBox.Show("Files found: " + count.ToString());
+            MessageBox.Show("Replacement Completed");
             xlApp.Quit();
 
             Marshal.ReleaseComObject(xlApp);
