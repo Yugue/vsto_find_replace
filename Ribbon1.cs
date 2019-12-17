@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.VisualBasic;
 
 
 namespace HelloWorld
@@ -20,9 +21,6 @@ namespace HelloWorld
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            //Worksheet currentSheet = Globals.ThisAddIn.GetActiveWorksheet();
-            //currentSheet.Range["A1"].Value = "Hello World";
-            //currentSheet.Columns.AutoFit();
             Globals.ThisAddIn.find_replace(@"C:\Users\ychen\Desktop\test");
         }
 
