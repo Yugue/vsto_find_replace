@@ -16,7 +16,7 @@ namespace HelloWorld
     {
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
@@ -24,5 +24,9 @@ namespace HelloWorld
             Globals.ThisAddIn.find_replace();
         }
 
+        private void btn_find_replace_xlt_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.find_replace_xlt();
+        }
     }
 }

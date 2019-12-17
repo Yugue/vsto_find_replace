@@ -37,6 +37,7 @@
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
             this.btn_find_rep = this.Factory.CreateRibbonButton();
+            this.btn_find_replace_xlt = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // group1
             // 
             this.group1.Items.Add(this.btn_find_rep);
+            this.group1.Items.Add(this.btn_find_replace_xlt);
             this.group1.Label = "Tools";
             this.group1.Name = "group1";
             // 
@@ -58,6 +60,12 @@
             this.btn_find_rep.Label = "Find and Replace";
             this.btn_find_rep.Name = "btn_find_rep";
             this.btn_find_rep.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            // 
+            // btn_find_replace_xlt
+            // 
+            this.btn_find_replace_xlt.Label = "Find and Replace XLT";
+            this.btn_find_replace_xlt.Name = "btn_find_replace_xlt";
+            this.btn_find_replace_xlt.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btn_find_replace_xlt_Click);
             // 
             // Ribbon1
             // 
@@ -78,6 +86,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btn_find_rep;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btn_find_replace_xlt;
     }
 
     partial class ThisRibbonCollection
