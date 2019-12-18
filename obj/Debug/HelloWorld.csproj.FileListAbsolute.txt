@@ -9,3 +9,4 @@ C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.csproj.Gener
 C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete
 C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.dll
 C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\Users\ychen\Desktop\Visual Basic\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
