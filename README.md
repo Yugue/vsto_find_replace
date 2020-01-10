@@ -24,6 +24,7 @@ Please note a few things about the add-on:
 3) The program will stop if one of the Excel files is "read-only"
 4) The replacement will be made for part of the cell.
 5) The "Find and Replace" button works for xlsx, xls, xlsm, xltx, xltm, xlt files, and "Find and Replace XLT" works for xlt files only. You have to select the folder where you would like to make the replacement, and all the Excel files will be overwritten with the new changes.
+6) If the file doesn't contain the targeted string, it will not be modified
 
 All copyright reserved to the author.
 
