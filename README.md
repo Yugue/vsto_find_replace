@@ -9,7 +9,7 @@ Useful resources:
 - https://www.youtube.com/watch?v=BFp2m3kV_Lw (how to package the add-on into an install file)
 
 I made an Excel add-on with C# VSTO that can find and replace text across multiple Excel files in batch in a selected folder. You can install the add-on using the msi file, but you will need two things:
-1) find and replace in batch.msi
+1) download and install the "find and replace in batch.msi" from this repo
 2) .net framework of 4.0 or higher
 Install the msi file, then open Excel, there should be a "Find and Replace" tab on the top ribbon. 
 
