@@ -1,12 +1,12 @@
 # vsto_find_replace
-Find and replace in batch for Excel files in a selected directory add-in button written in VSTO C#
+## Find and replace in batch for Excel files in a selected directory add-in button written in VSTO C#
 
 *** Disclaimer: Although this add-in has been tested and proven to be working, all risks and responsabilities go to the user of the add-in.
 
 ![Demo](demo.gif)
 
 
-Functionalities:
+### Functionalities:
 1) The "Find and Replace" button works for xlsx, xls, xlsm, xltx, xltm, xlt files, and "Find and Replace XLT" works for xlt files only. You have to select the folder where you would like to make the replacement, and all the Excel files will be overwritten with the new changes.
 2) The replacement will be made for part of the cell.
 3) If the file doesn't contain the targeted string, it will not be modified
@@ -16,7 +16,7 @@ Functionalities:
 
 
 
-You can install the add-in using the msi file, but you will need two things:
+### How to install:
 1) download and install the "find and replace in batch.msi" from this repo
 2) .net framework of 4.0 or higher
 
@@ -29,11 +29,11 @@ or you can download the whole folder, and open it as a solution on VisualBasic, 
 3) latest .NET Core SDK
 
 
-Useful resources:
+### Useful resources:
 - https://www.youtube.com/watch?v=FBjwYoHP0Go (how to make VSTO add-in button)
 - https://docs.microsoft.com/en-us/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio?view=vs-2019 (official VSTO doc)
 - https://www.youtube.com/watch?v=BFp2m3kV_Lw (how to package the add-in into an install file)
 
 
-All copyright reserved to the author.
+### All copyright reserved to the author.
 
