@@ -3,15 +3,11 @@ Find and replace in batch for all Excel files in a directory add-in button writt
 
 *** Disclaimer: Although this add-in has been tested and proven to be working, all risks and responsabilities go to the user of the add-in.
 
-Useful resources:
-- https://www.youtube.com/watch?v=FBjwYoHP0Go (how to make VSTO add-in button)
-- https://docs.microsoft.com/en-us/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio?view=vs-2019 (official VSTO doc)
-- https://www.youtube.com/watch?v=BFp2m3kV_Lw (how to package the add-in into an install file)
-
+I made an Excel add-in with C# VSTO that can find and replace text across multiple Excel files in batch in a selected folder. 
 Here is a demo of the add-in:
 ![Demo](demo.gif)
 
-I made an Excel add-in with C# VSTO that can find and replace text across multiple Excel files in batch in a selected folder. You can install the add-in using the msi file, but you will need two things:
+You can install the add-in using the msi file, but you will need two things:
 1) download and install the "find and replace in batch.msi" from this repo
 2) .net framework of 4.0 or higher
 Install the msi file, then open Excel, there should be a "Find and Replace" tab on the top ribbon. 
@@ -28,6 +24,12 @@ Please note a few things about the add-in:
 4) The replacement will be made for part of the cell.
 5) The "Find and Replace" button works for xlsx, xls, xlsm, xltx, xltm, xlt files, and "Find and Replace XLT" works for xlt files only. You have to select the folder where you would like to make the replacement, and all the Excel files will be overwritten with the new changes.
 6) If the file doesn't contain the targeted string, it will not be modified
+
+Useful resources:
+- https://www.youtube.com/watch?v=FBjwYoHP0Go (how to make VSTO add-in button)
+- https://docs.microsoft.com/en-us/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio?view=vs-2019 (official VSTO doc)
+- https://www.youtube.com/watch?v=BFp2m3kV_Lw (how to package the add-in into an install file)
+
 
 All copyright reserved to the author.
 
