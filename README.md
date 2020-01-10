@@ -10,6 +10,7 @@ Here is a demo of the add-in:
 You can install the add-in using the msi file, but you will need two things:
 1) download and install the "find and replace in batch.msi" from this repo
 2) .net framework of 4.0 or higher
+
 Install the msi file, then open Excel, there should be a "Find and Replace" tab on the top ribbon. 
 
 or you can download the whole folder, and open it as a solution on VisualBasic, run the solution, then the ribbon will appear. You will need:
