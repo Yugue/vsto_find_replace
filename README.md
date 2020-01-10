@@ -3,7 +3,6 @@ Find and replace in batch for Excel files in a selected directory add-in button 
 
 *** Disclaimer: Although this add-in has been tested and proven to be working, all risks and responsabilities go to the user of the add-in.
 
-Here is a demo of the add-in:
 ![Demo](demo.gif)
 
 
@@ -14,6 +13,7 @@ Functionalities:
 4) It does not replace the files in a subfolder in the selected folder
 5) The program will stop if one of the Excel files is protected
 6) The program will stop if one of the Excel files is "read-only"
+
 
 
 You can install the add-in using the msi file, but you will need two things:
