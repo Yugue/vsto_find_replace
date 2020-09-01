@@ -8,7 +8,7 @@
 
 ### Functionalities:
 1) The "Find and Replace" button works for xlsx, xls, xlsm, xltx, xltm, xlt files, and "Find and Replace XLT" works for xlt files only. You have to select the folder where you would like to make the replacement, and all the Excel files will be overwritten with the new changes.
-2) The replacement will be made for part of the cell.
+2) The replacement will be made for part of a string as well, for example "firstaaaa" will be replaced into "secondaaaa".
 3) If the file doesn't contain the targeted string, it will not be modified
 4) It does not replace the files in a subfolder in the selected folder
 5) The program will stop if one of the Excel files is protected
@@ -18,7 +18,7 @@
 
 ### How to install:
 1) download and install the "find and replace in batch.msi" from this repo
-2) .net framework of 4.0 or higher
+2) requires .net framework of 4.0 or higher
 
 Install the msi file, then open Excel, there should be a "Find and Replace" tab on the top ribbon. 
 
